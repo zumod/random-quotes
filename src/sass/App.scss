@@ -6,7 +6,6 @@
 	height: 100%;
 	width: 100%;
 	background: #e8eff5;
-	justify-content: space-evenly;
 
 	.quote-container {
 		display: flex;
@@ -16,7 +15,7 @@
 		min-width: 50%;
 
 		.title {
-			font-size: 48px;
+			font-size: 30px;
 			color: $rd;
 			margin: 10px;
 		}
