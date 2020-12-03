@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './sass/App.scss';
+
 import Quote from './component/Quote';
 
 const App = () => {
