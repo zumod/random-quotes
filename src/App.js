@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './sass/App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Quote from './Quote';
+
+const App = () => {
+	const images = [
+		'art',
+		'imagination',
+		'inspire',
+		'mobiledev',
+		'omega',
+		'opinions',
+		'people',
+		'socials',
+		'tea',
+		'time'
+	];
+	const img = images[Math.floor(Math.random() * images.length)];
+	const [ randomImage, setRandomImage ] = useState(img);
+	return (
+		<div className="App">
+			<div className="quote-container">
+				<h1 className="title">Quote of the day</h1>
+				<Quote />
+			</div>
+			<div className="image-container">
+				<img alt="main" src={require(`./assets/imgs/${randomImage}.svg`)} />
+			</div>
+		</div>
+	);
+};
 
 export default App;
